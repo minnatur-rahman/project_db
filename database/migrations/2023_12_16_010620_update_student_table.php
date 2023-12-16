@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::table('students', function (Blueprint $table) {
             // $table->renameColumn('city', 'cities');
               $table->dropColumn('peacentage');
+
         });
     }
 
