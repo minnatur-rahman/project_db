@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('sut_id');
             $table->foreign('sut_id')->references('id')->on('studeans');
+            $table->string('book');
+            $table->date('due_date')->nullable();
+            $table->boolean('status');
         });
     }
 
