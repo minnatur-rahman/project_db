@@ -11,7 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('libraries', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('sut_id');
+            $table->foreign('sut_id')->references('id')->on('studeans');
+        });
     }
 
     /**
@@ -19,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('libraries');
     }
 };
