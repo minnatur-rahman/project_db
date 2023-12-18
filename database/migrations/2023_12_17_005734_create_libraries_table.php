@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('libraries', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('studean_id')->constrained()
+            $table->foreignId('stu_id')->constrained('studeans')
             ->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('book');
             $table->date('due_date')->nullable();
