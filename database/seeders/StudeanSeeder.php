@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\studean;
 
 class StudeanSeeder extends Seeder
 {
@@ -12,6 +13,6 @@ class StudeanSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+
     }
 }
