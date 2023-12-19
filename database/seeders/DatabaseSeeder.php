@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\studean;
 use Illuminate\Database\Seeder;
 
 
@@ -13,9 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([
-            StudeanSeeder::class
-        ]);
+
+        studean::factory()->count(5)->create();
+
+        // $this->call([
+        //     StudeanSeeder::class
+        // ]);
 
 
 
