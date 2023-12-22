@@ -19,14 +19,17 @@ class StudeanSeeder extends Seeder
 
         $students = collect(json_decode($jason));
 
+        $students->each(function($user){
+           studean::create([
+               'name' => ''
+           ]);
+        });
 
-         $students->each(function($student){
-                 studean::insert($student);
-         });
 
-        // studean::create([
-        //     'name' => 'Minnatur Rahman',
-        //     'email' => 'minnatur@gmail.com'
-        // ]);
+        //  $students->each(function($student){
+        //          studean::insert($student);
+        //  });
+
+
     }
 }

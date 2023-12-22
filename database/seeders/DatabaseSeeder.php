@@ -16,11 +16,8 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-        // studean::factory()->count(10)->create();
+        studean::factory()->count(10)->create();
 
-        $this->call([
-            StudeanSeeder::class
-        ]);
 
 
 
