@@ -15,20 +15,18 @@ class StudeanSeeder extends Seeder
     public function run(): void
     {
 
-        $jason = File::get(path:'database/json/students.json');
+        $json = File::get(path:'database/json/students.json');
 
-        $students = collect(json_decode($jason));
+        $students = collect(json_decode($json));
 
-        $students->each(function($user){
+        $students->each(function($student){
            studean::create([
-               'name' => ''
+               'name' => $student->name,
+               'email' => $student->email
            ]);
         });
 
 
-        //  $students->each(function($student){
-        //          studean::insert($student);
-        //  });
 
 
     }
